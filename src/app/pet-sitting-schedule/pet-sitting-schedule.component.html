@@ -1,0 +1,18 @@
+<p>pet-sitting-schedule works!</p>
+<div class="container mt-5">
+  <h2>Pet Sitting Schedule</h2>
+
+  <form [formGroup]="scheduleForm" (ngSubmit)="submitSchedule()">
+    <div class="form-group">
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" class="form-control" formControlName="startDate"/>
+    </div>
+
+    <div class="form-group">
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" class="form-control" formControlName="endDate"/>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!scheduleForm.valid">Submit</button>
+  </form>
+</div>
